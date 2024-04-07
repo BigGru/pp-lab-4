@@ -1,9 +1,10 @@
-// Plik Employee.java
-public class Employee {
+package employees;
+
+public class employee {
     private String fullName;
     private double salary;
 
-    public Employee(String fullName, double salary) {
+    public employee(String fullName, double salary) {
         this.fullName = fullName;
         this.salary = salary;
     }
@@ -22,6 +23,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: {fullName=" + fullName + ", Salary=" + salary + "}";
+        return "Pracownik: {fullName=" + fullName + ", Wyplata=" + salary + "}";
     }
 }
