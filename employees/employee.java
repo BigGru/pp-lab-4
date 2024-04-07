@@ -4,12 +4,12 @@ public class employee {
     private String fullName;
     private double salary;
 
-    public employee(String fullName, double salary) {
+    public Employee(String fullName, double salary) {
         this.fullName = fullName;
         this.salary = salary;
     }
 
-    public String getName() {
+    public String getFullName() {
         return fullName;
     }
 
@@ -23,6 +23,9 @@ public class employee {
 
     @Override
     public String toString() {
-        return "Pracownik: {fullName=" + fullName + ", Wyplata=" + salary + "}";
+        return "Pracownik: {" +
+                "Imię i Nazwisko='" + fullName + '\'' +
+                ", Wyplata=" + salary +
+                '}';
     }
 }

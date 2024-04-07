@@ -1,10 +1,10 @@
 package employees;
 
 public class Worker extends Employee {
-    private String position;
+    public String position;
 
-    public Worker(String firstName, String lastName, double salary, String position) {
-        super(firstName, lastName, salary);
+    public Worker(String fullName, double salary, String position) {
+        super(fullName, salary);
         this.position = position;
     }
 
@@ -18,6 +18,10 @@ public class Worker extends Employee {
 
     @Override
     public String toString() {
-        return "Pracownik: " + getFullName() + ", Wypłata: " + getSalary() + ", Stanowisko: " + position;
+        return "Pracownik: {" +
+                "Imię i Nazwisko='" + getFullName() + '\'' +
+                ", Wyplata=" + getSalary() +
+                ", Stanowisko='" + position + '\'' +
+                '}';
     }
 }

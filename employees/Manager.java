@@ -1,10 +1,10 @@
 package employees;
 
 public class Manager extends Employee {
-    private int numberOfSubordinates;
+    public int numberOfSubordinates;
 
-    public Manager(String firstName, String lastName, double salary, int numberOfSubordinates) {
-        super(firstName, lastName, salary);
+    public Manager(String fullName, double salary, int numberOfSubordinates) {
+        super(fullName, salary);
         this.numberOfSubordinates = numberOfSubordinates;
     }
 
@@ -18,6 +18,10 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-        return "Menadżer: " + getFullName() + ", Wyplata: " + getSalary() + ", Subordinates: " + numberOfSubordinates;
+        return "Menedżer: {" +
+                "Imię i Nazwisko='" + getFullName() + '\'' +
+                ", Wyplata=" + getSalary() +
+                ", Subordinates=" + numberOfSubordinates +
+                '}';
     }
 }
